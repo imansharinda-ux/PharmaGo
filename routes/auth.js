@@ -1,16 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const { register, login, logout } = require('../controllers/authController');
 
-router.post('/register', (req, res) => {
-  res.json({ message: 'Register route - to be implemented' });
-});
-
-router.post('/login', (req, res) => {
-  res.json({ message: 'Login route - to be implemented' });
-});
-
-router.post('/logout', (req, res) => {
-  res.json({ message: 'Logout route - to be implemented' });
-});
+router.post('/register', register);
+router.post('/login', login);
+router.post('/logout', logout);
 
 module.exports = router;

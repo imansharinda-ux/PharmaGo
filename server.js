@@ -16,6 +16,14 @@ app.get('/', (req, res) => {
   });
 });
 
+// Import Routes
+const authRoutes = require('./routes/auth');
+const medicineRoutes = require('./routes/medicines');
+
+// Use Routes
+app.use('/api/auth', authRoutes);
+app.use('/api/medicines', medicineRoutes);
+
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({
@@ -29,6 +37,6 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`PharmaGo Backend running on http://localhost:${PORT}`);
-  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`🚀 PharmaGo Backend running on http://localhost:${PORT}`);
+  console.log(`📝 Environment: ${process.env.NODE_ENV || 'development'}`);
 });
