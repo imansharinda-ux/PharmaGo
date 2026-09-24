@@ -16,13 +16,13 @@ app.get('/', (req, res) => {
   });
 });
 
-// Import Routes
 const authRoutes = require('./routes/auth');
 const medicineRoutes = require('./routes/medicines');
+const orderRoutes = require('./routes/orders');
 
-// Use Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/medicines', medicineRoutes);
+app.use('/api/orders', orderRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

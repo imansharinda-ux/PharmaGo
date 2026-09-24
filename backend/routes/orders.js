@@ -1,20 +1,20 @@
 const express = require('express');
 const router = express.Router();
+const {
+  createOrder,
+  getAllOrders,
+  getOrderById,
+  updateOrderStatus,
+  getUserOrders,
+  cancelOrder
+} = require('../controllers/orderController');
+const { authenticateToken } = require('../middleware/auth');
 
-router.post('/', (req, res) => {
-  res.json({ message: 'Create order - to be implemented' });
-});
-
-router.get('/', (req, res) => {
-  res.json({ message: 'Get user orders - to be implemented' });
-});
-
-router.get('/:id', (req, res) => {
-  res.json({ message: 'Get order by ID - to be implemented' });
-});
-
-router.put('/:id', (req, res) => {
-  res.json({ message: 'Update order - to be implemented' });
-});
+router.post('/', authenticateToken, createOrder);
+router.get('/', authenticateToken, getAllOrders);
+router.get('/user/:user_id', authenticateToken, getUserOrders);
+router.get('/:id', authenticateToken, getOrderById);
+router.put('/:id/status', authenticateToken, updateOrderStatus);
+router.put('/:id/cancel', authenticateToken, cancelOrder);
 
 module.exports = router;
