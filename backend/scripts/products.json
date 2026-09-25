@@ -1,0 +1,434 @@
+[
+ {
+  "name": "Amoxicillin 500mg",
+  "pack_size": "Strip of 12 capsules",
+  "price": 240,
+  "rx_required": true,
+  "label": "ANTIBIOTIC",
+  "category": "rx",
+  "image_url": "/products/amoxicillin-500mg.jpg"
+ },
+ {
+  "name": "Metformin 500mg",
+  "pack_size": "Strip of 10 tablets",
+  "price": 180,
+  "rx_required": true,
+  "label": "DIABETES",
+  "category": "rx",
+  "image_url": "/products/metformin-500mg.jpg"
+ },
+ {
+  "name": "Atorvastatin 10mg",
+  "pack_size": "Strip of 10 tablets",
+  "price": 320,
+  "rx_required": true,
+  "label": "CHOLESTEROL",
+  "category": "rx",
+  "image_url": "/products/atorvastatin-10mg.jpg"
+ },
+ {
+  "name": "Losartan 50mg",
+  "pack_size": "Strip of 10 tablets",
+  "price": 290,
+  "rx_required": true,
+  "label": "BLOOD PRESSURE",
+  "category": "rx",
+  "image_url": "/products/losartan-50mg.jpg"
+ },
+ {
+  "name": "Omeprazole 20mg",
+  "pack_size": "Strip of 14 capsules",
+  "price": 210,
+  "rx_required": true,
+  "label": "GASTRIC",
+  "category": "rx",
+  "image_url": "/products/omeprazole-20mg.jpg"
+ },
+ {
+  "name": "Azithromycin 250mg",
+  "pack_size": "Strip of 6 tablets",
+  "price": 450,
+  "rx_required": true,
+  "label": "ANTIBIOTIC",
+  "category": "rx",
+  "image_url": "/products/azithromycin-250mg.jpg"
+ },
+ {
+  "name": "Paracetamol 500mg",
+  "pack_size": "Strip of 10 tablets",
+  "price": 55,
+  "rx_required": false,
+  "label": "PAIN RELIEF",
+  "category": "otc",
+  "image_url": "/products/paracetamol-500mg.jpg"
+ },
+ {
+  "name": "Ibuprofen 400mg",
+  "pack_size": "Strip of 10 tablets",
+  "price": 90,
+  "rx_required": false,
+  "label": "PAIN RELIEF",
+  "category": "otc",
+  "image_url": "/products/ibuprofen-400mg.jpg"
+ },
+ {
+  "name": "Cetirizine 10mg",
+  "pack_size": "Strip of 10 tablets",
+  "price": 120,
+  "rx_required": false,
+  "label": "ALLERGY",
+  "category": "otc",
+  "image_url": "/products/cetirizine-10mg.jpg"
+ },
+ {
+  "name": "Antacid Chewable Tablets",
+  "pack_size": "Pack of 20",
+  "price": 150,
+  "rx_required": false,
+  "label": "DIGESTION",
+  "category": "otc",
+  "image_url": "/products/antacid-chewable-tablets.jpg"
+ },
+ {
+  "name": "Cough Syrup",
+  "pack_size": "100 ml bottle",
+  "price": 650,
+  "rx_required": false,
+  "label": "COLD & FLU",
+  "category": "otc",
+  "image_url": "/products/cough-syrup.jpg"
+ },
+ {
+  "name": "Oral Rehydration Salts",
+  "pack_size": "Pack of 10 sachets",
+  "price": 60,
+  "rx_required": false,
+  "label": "HYDRATION",
+  "category": "otc",
+  "image_url": "/products/oral-rehydration-salts.jpg"
+ },
+ {
+  "name": "Vitamin C 1000mg",
+  "pack_size": "Bottle of 30 tablets",
+  "price": 950,
+  "rx_required": false,
+  "label": "SUPPLEMENT",
+  "category": "vit",
+  "image_url": "/products/vitamin-c-1000mg.jpg"
+ },
+ {
+  "name": "Vitamin D3 1000 IU",
+  "pack_size": "Bottle of 60 softgels",
+  "price": 1200,
+  "rx_required": false,
+  "label": "SUPPLEMENT",
+  "category": "vit",
+  "image_url": "/products/vitamin-d3-1000-iu.jpg"
+ },
+ {
+  "name": "Daily Multivitamin",
+  "pack_size": "Bottle of 60 tablets",
+  "price": 1850,
+  "rx_required": false,
+  "label": "SUPPLEMENT",
+  "category": "vit",
+  "image_url": "/products/daily-multivitamin.jpg"
+ },
+ {
+  "name": "Omega-3 Fish Oil",
+  "pack_size": "Bottle of 90 softgels",
+  "price": 2400,
+  "rx_required": false,
+  "label": "SUPPLEMENT",
+  "category": "vit",
+  "image_url": "/products/omega-3-fish-oil.jpg"
+ },
+ {
+  "name": "Zinc 50mg",
+  "pack_size": "Bottle of 60 tablets",
+  "price": 780,
+  "rx_required": false,
+  "label": "SUPPLEMENT",
+  "category": "vit",
+  "image_url": "/products/zinc-50mg.jpg"
+ },
+ {
+  "name": "Calcium + Vitamin D3",
+  "pack_size": "Bottle of 60 tablets",
+  "price": 1100,
+  "rx_required": false,
+  "label": "SUPPLEMENT",
+  "category": "vit",
+  "image_url": "/products/calcium-vitamin-d3.jpg"
+ },
+ {
+  "name": "Cetaphil Gentle Skin Cleanser",
+  "pack_size": "250 ml · All skin types",
+  "price": 3450,
+  "rx_required": false,
+  "label": "CETAPHIL",
+  "category": "beauty",
+  "image_url": "/products/cetaphil-gentle-skin-cleanser.jpg"
+ },
+ {
+  "name": "CeraVe Moisturising Cream",
+  "pack_size": "340 g · Dry to very dry skin",
+  "price": 6900,
+  "rx_required": false,
+  "label": "CERAVE",
+  "category": "beauty",
+  "image_url": "/products/cerave-moisturising-cream.jpg"
+ },
+ {
+  "name": "CeraVe Hydrating Facial Cleanser",
+  "pack_size": "236 ml · Normal to dry skin",
+  "price": 5200,
+  "rx_required": false,
+  "label": "CERAVE",
+  "category": "beauty",
+  "image_url": "/products/cerave-hydrating-facial-cleanser.jpg"
+ },
+ {
+  "name": "Iodex Fast Relief Pain Balm",
+  "pack_size": "40 g · Muscle & joint pain",
+  "price": 690,
+  "rx_required": false,
+  "label": "IODEX",
+  "category": "beauty",
+  "image_url": "/products/iodex-fast-relief-pain-balm.jpg"
+ },
+ {
+  "name": "Sunscreen SPF 50",
+  "pack_size": "50 ml · Face & body",
+  "price": 2800,
+  "rx_required": false,
+  "label": "SUN CARE",
+  "category": "beauty",
+  "image_url": "/products/sunscreen-spf-50.jpg"
+ },
+ {
+  "name": "Moisturising Lip Balm",
+  "pack_size": "4.5 g stick",
+  "price": 450,
+  "rx_required": false,
+  "label": "LIP CARE",
+  "category": "beauty",
+  "image_url": "/products/moisturising-lip-balm.jpg"
+ },
+ {
+  "name": "Knee Support (Adjustable)",
+  "pack_size": "Sizes S · M · L · XL",
+  "price": 2450,
+  "rx_required": false,
+  "label": "ORTHO CARE",
+  "category": "support",
+  "image_url": "/products/knee-support-adjustable.jpg"
+ },
+ {
+  "name": "Shoulder Support Brace",
+  "pack_size": "Universal fit · Left / Right",
+  "price": 3200,
+  "rx_required": false,
+  "label": "ORTHO CARE",
+  "category": "support",
+  "image_url": "/products/shoulder-support-brace.jpg"
+ },
+ {
+  "name": "Ankle Binder",
+  "pack_size": "Sizes S · M · L",
+  "price": 1650,
+  "rx_required": false,
+  "label": "ORTHO CARE",
+  "category": "support",
+  "image_url": "/products/ankle-binder.jpg"
+ },
+ {
+  "name": "Lumbar Back Support Belt",
+  "pack_size": "Sizes M · L · XL",
+  "price": 4100,
+  "rx_required": false,
+  "label": "ORTHO CARE",
+  "category": "support",
+  "image_url": "/products/lumbar-back-support-belt.jpg"
+ },
+ {
+  "name": "Wrist Support",
+  "pack_size": "Universal fit",
+  "price": 1350,
+  "rx_required": false,
+  "label": "ORTHO CARE",
+  "category": "support",
+  "image_url": "/products/wrist-support.jpg"
+ },
+ {
+  "name": "Cervical Collar",
+  "pack_size": "Sizes S · M · L",
+  "price": 2200,
+  "rx_required": false,
+  "label": "ORTHO CARE",
+  "category": "support",
+  "image_url": "/products/cervical-collar.jpg"
+ },
+ {
+  "name": "Sensitive Toothpaste",
+  "pack_size": "100 g tube",
+  "price": 350,
+  "rx_required": false,
+  "label": "ORAL CARE",
+  "category": "personal",
+  "image_url": "/products/sensitive-toothpaste.jpg"
+ },
+ {
+  "name": "Antiseptic Mouthwash",
+  "pack_size": "250 ml bottle",
+  "price": 790,
+  "rx_required": false,
+  "label": "ORAL CARE",
+  "category": "personal",
+  "image_url": "/products/antiseptic-mouthwash.jpg"
+ },
+ {
+  "name": "Hand Sanitizer",
+  "pack_size": "100 ml bottle",
+  "price": 450,
+  "rx_required": false,
+  "label": "HYGIENE",
+  "category": "personal",
+  "image_url": "/products/hand-sanitizer.jpg"
+ },
+ {
+  "name": "Antiseptic Liquid",
+  "pack_size": "500 ml bottle",
+  "price": 690,
+  "rx_required": false,
+  "label": "HYGIENE",
+  "category": "personal",
+  "image_url": "/products/antiseptic-liquid.jpg"
+ },
+ {
+  "name": "Anti-dandruff Shampoo",
+  "pack_size": "200 ml bottle",
+  "price": 1150,
+  "rx_required": false,
+  "label": "HAIR CARE",
+  "category": "personal",
+  "image_url": "/products/anti-dandruff-shampoo.jpg"
+ },
+ {
+  "name": "Cotton Buds",
+  "pack_size": "Pack of 100",
+  "price": 180,
+  "rx_required": false,
+  "label": "HYGIENE",
+  "category": "personal",
+  "image_url": "/products/cotton-buds.jpg"
+ },
+ {
+  "name": "Gentle Baby Lotion",
+  "pack_size": "200 ml bottle",
+  "price": 950,
+  "rx_required": false,
+  "label": "BABY CARE",
+  "category": "baby",
+  "image_url": "/products/gentle-baby-lotion.jpg"
+ },
+ {
+  "name": "Baby Diapers (Size M)",
+  "pack_size": "Pack of 40",
+  "price": 2450,
+  "rx_required": false,
+  "label": "BABY CARE",
+  "category": "baby",
+  "image_url": "/products/baby-diapers-size-m.jpg"
+ },
+ {
+  "name": "Baby Wipes",
+  "pack_size": "Pack of 80",
+  "price": 650,
+  "rx_required": false,
+  "label": "BABY CARE",
+  "category": "baby",
+  "image_url": "/products/baby-wipes.jpg"
+ },
+ {
+  "name": "Prenatal Vitamins",
+  "pack_size": "Bottle of 30 tablets",
+  "price": 1900,
+  "rx_required": false,
+  "label": "MATERNAL",
+  "category": "baby",
+  "image_url": "/products/prenatal-vitamins.jpg"
+ },
+ {
+  "name": "Nipple Care Cream",
+  "pack_size": "30 g tube",
+  "price": 1300,
+  "rx_required": false,
+  "label": "MATERNAL",
+  "category": "baby",
+  "image_url": "/products/nipple-care-cream.jpg"
+ },
+ {
+  "name": "Baby Digital Thermometer",
+  "pack_size": "Flexible tip",
+  "price": 1450,
+  "rx_required": false,
+  "label": "BABY CARE",
+  "category": "baby",
+  "image_url": "/products/baby-digital-thermometer.jpg"
+ },
+ {
+  "name": "Digital BP Monitor",
+  "pack_size": "Upper arm · Memory 60",
+  "price": 12500,
+  "rx_required": false,
+  "label": "MONITORING",
+  "category": "device",
+  "image_url": "/products/digital-bp-monitor.jpg"
+ },
+ {
+  "name": "Digital Thermometer",
+  "pack_size": "Fast 10-second reading",
+  "price": 1450,
+  "rx_required": false,
+  "label": "MONITORING",
+  "category": "device",
+  "image_url": "/products/digital-thermometer.jpg"
+ },
+ {
+  "name": "Pulse Oximeter",
+  "pack_size": "Fingertip · OLED display",
+  "price": 4800,
+  "rx_required": false,
+  "label": "MONITORING",
+  "category": "device",
+  "image_url": "/products/pulse-oximeter.jpg"
+ },
+ {
+  "name": "Glucometer Kit",
+  "pack_size": "With 25 test strips",
+  "price": 6900,
+  "rx_required": false,
+  "label": "DIABETES",
+  "category": "device",
+  "image_url": "/products/glucometer-kit.jpg"
+ },
+ {
+  "name": "Compressor Nebulizer",
+  "pack_size": "Adult & child masks",
+  "price": 14500,
+  "rx_required": false,
+  "label": "RESPIRATORY",
+  "category": "device",
+  "image_url": "/products/compressor-nebulizer.jpg"
+ },
+ {
+  "name": "First Aid Kit",
+  "pack_size": "42 essentials",
+  "price": 3200,
+  "rx_required": false,
+  "label": "FIRST AID",
+  "category": "device",
+  "image_url": "/products/first-aid-kit.jpg"
+ }
+]

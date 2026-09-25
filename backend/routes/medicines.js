@@ -7,12 +7,17 @@ const {
   updateMedicine,
   deleteMedicine
 } = require('../controllers/medicineController');
-const { authenticateToken } = require('../middleware/auth');
+const { authenticateToken, optionalAuth, requireRole } = require('../middleware/auth');
+const { validateMedicine } = require('../middleware/validators');
+const { productImageUpload, handleUpload } = require('../middleware/upload');
 
-router.get('/', getAllMedicines);
+// Anyone can browse the shop
+router.get('/', optionalAuth, getAllMedicines);
 router.get('/:id', getMedicineById);
-router.post('/', authenticateToken, createMedicine);
-router.put('/:id', authenticateToken, updateMedicine);
-router.delete('/:id', authenticateToken, deleteMedicine);
+
+// Only the admin can add, edit or remove products
+router.post('/', authenticateToken, requireRole('admin'), handleUpload(productImageUpload), validateMedicine, createMedicine);
+router.put('/:id', authenticateToken, requireRole('admin'), handleUpload(productImageUpload), updateMedicine);
+router.delete('/:id', authenticateToken, requireRole('admin'), deleteMedicine);
 
 module.exports = router;

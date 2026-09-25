@@ -24,3 +24,6 @@ temp/
 
 dist/
 build/
+
+# uploaded prescriptions and product photos
+uploads/
