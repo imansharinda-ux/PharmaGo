@@ -1,36 +1,39 @@
 import { Link } from 'react-router-dom'
 import Logo from './Logo'
-import Icon from './Icon'
 
 export default function Footer() {
   return (
-    <footer className="footer">
-      <div className="container footer-grid">
-        <div>
-          <Logo light />
-          <p className="footer-text">Your pharmacy, delivered. Medicines checked by licensed pharmacists and brought to your door.</p>
+    <footer className="d-footer">
+      <div className="d-wrap d-footer-in">
+        <div className="d-footer-top">
+          <div className="d-footer-brand">
+            <Logo />
+            <p>Online medicine ordering and delivery, with licensed pharmacists behind every order.</p>
+          </div>
+          <div className="d-footer-cols">
+            <div className="d-footer-col">
+              <span className="d-link">Shop</span>
+              <Link className="d-flink" to="/shop?category=rx">Prescription medicines</Link>
+              <Link className="d-flink" to="/shop?category=otc">Over-the-counter</Link>
+              <Link className="d-flink" to="/shop?category=beauty">Beauty &amp; skin care</Link>
+              <Link className="d-flink" to="/shop?category=support">Supports &amp; braces</Link>
+            </div>
+            <div className="d-footer-col">
+              <span className="d-link">Orders</span>
+              <Link className="d-flink" to="/prescription">Upload prescription</Link>
+              <Link className="d-flink" to="/track">Track an order</Link>
+              <Link className="d-flink" to="/orders">My orders</Link>
+            </div>
+            <div className="d-footer-col">
+              <span className="d-link">Contact</span>
+              <a className="d-flink" href="tel:+94788709802">+94 78 870 9802</a>
+              <a className="d-flink" href="mailto:imansharinda@gmail.com">imansharinda@gmail.com</a>
+              <Link className="d-flink" to="/contact">No. 23, Galle Road, Galle</Link>
+            </div>
+          </div>
         </div>
-        <div>
-          <h4>Shop</h4>
-          <Link to="/shop?category=rx">Prescription medicines</Link>
-          <Link to="/shop?category=otc">Over-the-counter</Link>
-          <Link to="/shop?category=vit">Vitamins</Link>
-          <Link to="/shop?category=beauty">Beauty &amp; skin care</Link>
-        </div>
-        <div>
-          <h4>Help</h4>
-          <Link to="/prescription">Upload prescription</Link>
-          <Link to="/track">Track an order</Link>
-          <Link to="/contact">Contact us</Link>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <a href="tel:+94788709802"><Icon name="phone" size={15} /> +94 78 870 9802</a>
-          <a href="mailto:imansharinda@gmail.com"><Icon name="mail" size={15} /> imansharinda@gmail.com</a>
-          <span><Icon name="pin" size={15} /> No. 23, Galle Road, Galle, Sri Lanka</span>
-        </div>
+        <div className="d-footer-copy">© {new Date().getFullYear()} PharmaGo · All rights reserved.</div>
       </div>
-      <div className="container footer-bottom">© {new Date().getFullYear()} PharmaGo · EC5207 Group 71</div>
     </footer>
   )
 }

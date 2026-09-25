@@ -15,7 +15,7 @@ export const fmtSize = n => n > 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Mat
 
 export const initials = s => String(s || '').split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0].toUpperCase()).join('')
 
-export const DISTRICTS = ['Colombo', 'Gampaha', 'Kalutara', 'Kandy', 'Galle', 'Matara', 'Kurunegala', 'Jaffna', 'Anuradhapura', 'Badulla', 'Ratnapura', 'Trincomalee']
+export const DISTRICTS = ['Colombo', 'Gampaha', 'Kalutara', 'Kandy', 'Matale', 'Nuwara Eliya', 'Galle', 'Matara', 'Hambantota', 'Jaffna', 'Kilinochchi', 'Mannar', 'Vavuniya', 'Mullaitivu', 'Batticaloa', 'Ampara', 'Trincomalee', 'Kurunegala', 'Puttalam', 'Anuradhapura', 'Polonnaruwa', 'Badulla', 'Monaragala', 'Ratnapura', 'Kegalle']
 
 export const daysFor = d => (d === 'Colombo' ? '1 day' : '2–3 days')
 
@@ -66,3 +66,13 @@ export function buildSteps(order, events = []) {
     }
   })
 }
+
+export const CAT_DESC = {
+  rx: 'Order with a valid, pharmacist-verified prescription.', otc: 'Pain relief, cold & flu, allergy and digestion.',
+  vit: 'Immunity, energy and everyday wellness.', beauty: 'Cleansers, moisturisers, sunscreen and more.',
+  support: 'Knee, shoulder, ankle and back supports.', personal: 'Oral care, hygiene and hair care.',
+  baby: 'Baby care and maternal health.', device: 'BP monitors, thermometers and first aid.',
+}
+
+export const TINTS = { rx: '#EEF3EC', otc: '#EAF0F5', vit: '#F6EFE6', beauty: '#EEF3EC', support: '#EAF0F5', personal: '#EEF3EC', baby: '#F6EFE6', device: '#EAF0F5' }
+

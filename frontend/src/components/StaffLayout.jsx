@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import Logo from './Logo'
 import Icon from './Icon'
+import ThemeToggle from './ThemeToggle'
 import { useAuth } from '../context/AuthContext'
 import { initials } from '../utils/format'
 
@@ -38,6 +39,7 @@ export default function StaffLayout() {
               <span className="avatar avatar-light">{initials(user.name)}</span>
               <span><b>{user.name}</b><small>{ROLE[user.role]}</small></span>
             </span>
+            <ThemeToggle />
             <button className="snav-out" onClick={() => { logout(); nav('/login') }}>
               <Icon name="logout" size={16} /> Log out
             </button>
