@@ -2,6 +2,8 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
+  "description": "PharmaGo frontend - online medicine ordering system",
+  "author": "Group 71",
   "type": "module",
   "scripts": {
     "dev": "vite",
