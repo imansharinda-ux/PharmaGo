@@ -52,6 +52,19 @@ async function run() {
     pAdded++;
   }
   console.log(`✅ Products ready (${pAdded} added)`);
+    const old = await pool.query("SELECT id, name FROM medicines WHERE image_url IS NULL OR image_url = ''");
+  for (const m of old.rows) {
+    const match = products.find(p => p.name.toLowerCase().startsWith(m.name.toLowerCase().trim()));
+    if (match) {
+      await pool.query(
+        'UPDATE medicines SET image_url = $2, label = COALESCE(label, $3), pack_size = COALESCE(pack_size, $4), category = COALESCE(category, $5), rx_required = $6, active = FALSE WHERE id = $1',
+        [m.id, match.image_url, match.label, match.pack_size, match.category, match.rx_required]
+      );
+    } else {
+      await pool.query("UPDATE medicines SET image_url = '/products/placeholder.svg', active = FALSE WHERE id = $1", [m.id]);
+    }
+  }
+  console.log(`✅ Old products cleaned (${old.rows.length} hidden from the shop)`);
   console.log('\nDemo logins:');
   STAFF.filter(u => u.role !== 'rider').forEach(u => console.log(`  ${u.role.padEnd(11)} ${u.email}  /  ${u.password}`));
 }
