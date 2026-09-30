@@ -12,7 +12,6 @@ Day 02 - 24/09/2026
 - Created the database and connected it to the backend
 - Used Postman to test and verify the API endpoints
 
-
 Day 03 - 25/09/2026
 
 - Added user roles (customer, pharmacist, delivery master, admin) with JWT login
