@@ -50,3 +50,9 @@ Day 08 - 27/10/2026
 - Fixed the port 5000 conflict
 - Tested all user roles running in Docker
 
+
+Day 09 - 10/11/2026
+
+- Updated the frontend README and added a folder structure doc
+- Added config files: .env.example, .nvmrc, .editorconfig, .prettierrc
+- Added project details to package.json and updated .gitignore
