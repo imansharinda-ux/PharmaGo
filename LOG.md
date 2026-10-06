@@ -25,3 +25,15 @@ Day 04 - 26/09/2026
 - Redesigned Home, Shop, Login, Contact and Prescription pages
 - Added light/dark theme, new product photos and responsive layout
 - Tested all roles; more frontend changes planned
+
+Day 05 - 30/09/2026
+
+- Created a Dockerfile for the backend (Node 22, port 5000)
+- Created a Dockerfile for the frontend (Vite build, served with Nginx)
+- Added .dockerignore files and built both images
+
+Day 06 - 06/10/2026
+
+- Added nginx.conf to serve the React app
+- Forwarded /api and /uploads to the backend container
+- Increased the upload limit for prescription files
