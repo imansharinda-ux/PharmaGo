@@ -37,3 +37,9 @@ Day 06 - 06/10/2026
 - Added nginx.conf to serve the React app
 - Forwarded /api and /uploads to the backend container
 - Increased the upload limit for prescription files
+
+Day 07 - 12/10/2026
+
+- Created docker-compose.yml for db, backend and frontend
+- Added volumes to keep database data and uploads
+- Ran the full system with docker compose up --build
