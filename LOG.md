@@ -43,3 +43,10 @@ Day 07 - 12/10/2026
 - Created docker-compose.yml for db, backend and frontend
 - Added volumes to keep database data and uploads
 - Ran the full system with docker compose up --build
+
+Day 08 - 27/10/2026
+
+- Fixed the MyOrders import case and the API URL issue
+- Fixed the port 5000 conflict
+- Tested all user roles running in Docker
+

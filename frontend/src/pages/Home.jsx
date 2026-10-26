@@ -33,6 +33,23 @@ const RX_STEPS = [
 
 const DIST = [[5, 84], [4, 11], [3, 3], [2, 1], [1, 1]]
 
+const REVIEWS = [
+  { stars: 5, name: 'Nadeesha P.', city: 'Colombo', tag: 'Prescription order', text: 'Uploaded my prescription at night and it arrived the next morning. The pharmacist messaged me to confirm the dosage.' },
+  { stars: 5, name: 'Kasun R.', city: 'Kandy', tag: 'Cart order', text: 'The tracking page showed every step, even the rider and the delivery date. Very easy to use.' },
+  { stars: 4, name: 'Ishara W.', city: 'Galle', tag: 'Beauty & skin care', text: 'Good prices on skin care. Delivery took two days but everything was packed well.' },
+  { stars: 5, name: 'Dilshan F.', city: 'Gampaha', tag: 'Supports & braces', text: 'The knee support fitted perfectly and the chat with the pharmacist was really helpful.' },
+  { stars: 4, name: 'Tharindu S.', city: 'Kurunegala', tag: 'Prescription order', text: 'My prescription was verified within a few hours. Would like more payment options.' },
+  { stars: 3, name: 'Malsha K.', city: 'Matara', tag: 'Cart order', text: 'The order was correct, but I would like an evening delivery time option.' },
+  { stars: 2, name: 'Ruwan J.', city: 'Jaffna', tag: 'Cart order', text: 'Delivery to Jaffna took three days. Customer service kept me updated though.' },
+  { stars: 1, name: 'Sachini M.', city: 'Badulla', tag: 'Cart order', text: 'One item was out of stock after I ordered. The refund was quick, but it was disappointing.' },
+]
+
+const Stars = ({ n, size = 16 }) => (
+  <span className="d-rev-stars" aria-label={`${n} out of 5 stars`}>
+    {[1, 2, 3, 4, 5].map(i => <svg key={i} width={size} height={size} viewBox="0 0 24 24" fill={i <= n ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M12 3l2.8 5.8 6.2.9-4.5 4.4 1.1 6.3L12 17.4l-5.6 3 1.1-6.3L3 9.7l6.2-.9z" /></svg>)}
+  </span>
+)
+
 const Outline = ({ children }) => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{children}</svg>
 )
@@ -44,6 +61,8 @@ export default function Home() {
   const [quick, setQuick] = useState(null)
   const [trackNo, setTrackNo] = useState('')
   const [mine, setMine] = useState([])
+  const [star, setStar] = useState(null)
+  const [pinned, setPinned] = useState(null)
 
   useEffect(() => {
     api.get('/medicines').then(({ data }) => setAll(data.medicines)).catch(() => {})
@@ -54,6 +73,8 @@ export default function Home() {
 
   const norm = trackNo.trim().toUpperCase().replace(/\s+/g, '').replace(/^PG(?!-)/, 'PG-')
   const validNo = /^PG-\d{5}$/.test(norm)
+  const active = star ?? pinned
+  const shownReviews = active ? REVIEWS.filter(r => r.stars === active) : REVIEWS.slice(0, 6)
   const help = !trackNo ? 'Enter the order number from your confirmation.' : validNo ? `Ready to track ${norm}` : 'Use PG followed by 5 digits, e.g. PG-10002'
 
   return (
@@ -76,7 +97,7 @@ export default function Home() {
         </a>
 
         <div className="d-scene">
-                    <img className="d-hero-photo is-light" src={heroImg} alt="The PharmaGo app on a phone, surrounded by medicine bottles and capsules" />
+          <img className="d-hero-photo is-light" src={heroImg} alt="The PharmaGo app on a phone, surrounded by medicine bottles and capsules" />
           <img className="d-hero-photo is-dark" src={heroDark} alt="" aria-hidden="true" />
           <div className="d-float d-gel" aria-hidden="true">
             <svg width="90" height="58" viewBox="0 0 90 58"><defs><radialGradient id="pgGel" cx=".35" cy=".3" r=".85"><stop offset="0" stopColor="#EFFCF3" /><stop offset=".22" stopColor="#9CDDB3" /><stop offset=".65" stopColor="#2F8A55" /><stop offset="1" stopColor="#123F25" /></radialGradient></defs><ellipse cx="45" cy="29" rx="40" ry="24" fill="url(#pgGel)" /><ellipse cx="31" cy="17" rx="14" ry="5.5" fill="#FFFFFF" opacity=".75" /><ellipse cx="58" cy="42" rx="16" ry="4" fill="#C9F2D6" opacity=".35" /></svg>
@@ -215,23 +236,48 @@ export default function Home() {
             {[0, 1, 2, 3, 4].map(i => <svg key={i} width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3l2.8 5.8 6.2.9-4.5 4.4 1.1 6.3L12 17.4l-5.6 3 1.1-6.3L3 9.7l6.2-.9z" /></svg>)}
           </div>
           <div className="d-flink">Based on 3,214 verified-purchase ratings</div>
+          <div className="d-rev-hint">Hover over a star row to see those reviews</div>
         </div>
-        <div className="d-dist">
+        <div className="d-dist" onMouseLeave={() => setStar(null)}>
           {DIST.map(([s, pct]) => (
-            <div className="d-rrow" key={s}><span>{s} star</span><div className="d-bar"><i style={{ width: `${pct}%` }} /></div><span>{pct}%</span></div>
+            <button
+              type="button"
+              className={`d-rrow ${active === s ? 'on' : ''}`}
+              key={s}
+              onMouseEnter={() => setStar(s)}
+              onFocus={() => setStar(s)}
+              onBlur={() => setStar(null)}
+              onClick={() => setPinned(pinned === s ? null : s)}
+              aria-pressed={pinned === s}
+            >
+              <span>{s} star</span><div className="d-bar"><i style={{ width: `${pct}%` }} /></div><span>{pct}%</span>
+            </button>
           ))}
         </div>
       </section>
 
-      <div className="d-wrap">
-        <div className="d-cta">
+      <section className="d-wrap d-reviews">
+        <div className="d-row-head">
           <div>
-            <h3>Have a prescription? We’ll take it from here.</h3>
-            <p>Upload it now — a pharmacist reviews it and adds your medicines to your order.</p>
+            <div className="d-cap">Reviews</div>
+            <h2>{active ? `${active}-star reviews` : 'What our customers say'}</h2>
           </div>
-          <a className="d-btn" href="#prescription" style={{ padding: '20px 34px' }}>Upload prescription</a>
+          {pinned && <button type="button" className="d-tlink" onClick={() => setPinned(null)}>Show all reviews</button>}
         </div>
-      </div>
+        <div className="d-rev-grid">
+          {shownReviews.map(r => (
+            <article className="d-rev" key={r.name}>
+              <div className="d-rev-top">
+                <span className="d-rev-av">{r.name[0]}</span>
+                <div><b>{r.name}</b><small>{r.city}</small></div>
+                <Stars n={r.stars} />
+              </div>
+              <p>{r.text}</p>
+              <span className="d-rev-tag">{r.tag}</span>
+            </article>
+          ))}
+        </div>
+      </section>
 
       {quick && <QuickView p={quick} onClose={() => setQuick(null)} />}
     </>
