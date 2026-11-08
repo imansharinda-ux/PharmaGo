@@ -12,7 +12,6 @@ Day 02 - 24/09/2026
 - Created the database and connected it to the backend
 - Used Postman to test and verify the API endpoints
 
-
 Day 03 - 25/09/2026
 
 - Added user roles (customer, pharmacist, delivery master, admin) with JWT login
@@ -26,3 +25,28 @@ Day 04 - 26/09/2026
 - Redesigned Home, Shop, Login, Contact and Prescription pages
 - Added light/dark theme, new product photos and responsive layout
 - Tested all roles; more frontend changes planned
+
+Day 05 - 30/09/2026
+
+- Created a Dockerfile for the backend (Node 22, port 5000)
+- Created a Dockerfile for the frontend (Vite build, served with Nginx)
+- Added .dockerignore files and built both images
+
+Day 06 - 06/10/2026
+
+- Added nginx.conf to serve the React app
+- Forwarded /api and /uploads to the backend container
+- Increased the upload limit for prescription files
+
+Day 07 - 12/10/2026
+
+- Created docker-compose.yml for db, backend and frontend
+- Added volumes to keep database data and uploads
+- Ran the full system with docker compose up --build
+
+Day 08 - 27/10/2026
+
+- Fixed the MyOrders import case and the API URL issue
+- Fixed the port 5000 conflict
+- Tested all user roles running in Docker
+
